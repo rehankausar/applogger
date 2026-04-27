@@ -36,35 +36,6 @@ The admin UI also requires **Bootstrap 5**, **Font Awesome**, **DataTables**, an
 
 ## Installation
 
-### Option A — Local path (monorepo / development)
-
-1. Place the package in your project:
-   ```
-   packages/fastnetksa/laravel-applogger/
-   ```
-
-2. Register it in your root `composer.json`:
-   ```json
-   {
-       "repositories": [
-           {
-               "type": "path",
-               "url": "packages/fastnetksa/laravel-applogger"
-           }
-       ],
-       "require": {
-           "fastnetksa/laravel-applogger": "@dev"
-       }
-   }
-   ```
-
-3. Install:
-   ```bash
-   composer require fastnetksa/laravel-applogger:@dev
-   ```
-
-### Option B — Packagist (when published)
-
 ```bash
 composer require fastnetksa/laravel-applogger
 ```
@@ -432,7 +403,7 @@ ApplicationLog::dateRange('2026-01-01', '2026-01-31')->get(); // date range
 ## Package Structure
 
 ```
-packages/fastnetksa/laravel-applogger/
+laravel-applogger/
 ├── composer.json
 ├── config/
 │   └── applogger.php                    ← default config (publish to override)
