@@ -1,0 +1,35 @@
+{
+    "name": "fastnetksa/laravel-applogger",
+    "description": "Configurable database and file log management package for Laravel applications.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rehan Kausar",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/rehankausar/applogger",
+    "keywords": ["laravel", "logging", "database-logs", "log-management", "monolog"],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/database": "^11.0|^12.0",
+        "illuminate/http": "^11.0|^12.0",
+        "monolog/monolog": "^3.0",
+        "yajra/laravel-datatables-oracle": "^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FastnetKSA\\AppLogger\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FastnetKSA\\AppLogger\\AppLoggerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
