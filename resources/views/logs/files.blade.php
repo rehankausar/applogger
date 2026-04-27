@@ -99,7 +99,7 @@
         </div>
     </div>
 
-    @push('script_page')
+    @push(config('applogger.layout.stack', 'script_page'))
     <script>
         let currentFileName = '';
 

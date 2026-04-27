@@ -2,6 +2,12 @@
 
 All notable changes to this package are documented here.
 
+## [1.0.1] — 2026-04-27
+
+### Fixed
+- `@push('script_page')` hardcoded stack name replaced with `@push(config('applogger.layout.stack', 'script_page'))` in both `index` and `files` views — host apps can now override the stack name via config instead of publishing and editing views
+- Added `layout.stack` key to `config/applogger.php` (default: `script_page`) with documentation listing common values (`scripts`, `script_page`, `js`, `page_scripts`)
+
 ## [1.0.0] — 2026-04-27
 
 ### Added

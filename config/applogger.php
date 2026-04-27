@@ -111,18 +111,22 @@ return [
     |--------------------------------------------------------------------------
     | View Layout
     |--------------------------------------------------------------------------
-    | Set 'value' to the Blade view path of your application's main layout.
-    | The layout must contain @yield('content') for the page body.
+    | 'value' → Blade view path of your application's main layout.
+    |           The layout must contain @yield('content') for the page body.
     |
-    | Examples:
     |   'layouts.app'    → resources/views/layouts/app.blade.php  (Laravel default)
     |   'layouts.admin'  → resources/views/layouts/admin.blade.php
     |
-    | If your layout uses {{ $slot }} only (component-style) you must also add
-    | {{ $slot ?? '' }} so @extends() usage doesn't throw "Undefined variable $slot".
+    | 'stack' → Name of the Blade @stack your layout exposes for inline scripts.
+    |           Package views use @push(config('applogger.layout.stack')) to inject
+    |           their DataTable / AJAX scripts into this stack.
+    |
+    |   Common values: 'scripts', 'script_page', 'js', 'page_scripts'
+    |   Set this to whatever @stack your layout defines.
     */
     'layout' => [
         'value' => 'layouts.app',
+        'stack' => 'script_page',
     ],
 
     /*
